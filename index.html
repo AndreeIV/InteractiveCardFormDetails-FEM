@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Interactive card details form</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+  <link href='https://css.gg/check.css' rel='stylesheet'>
+
+  <link rel="stylesheet" href="./build/css/app.css">
+</head>
+<body>
+  <div class="main">
+    <div class="header">
+      <img src="./images/bg-main-mobile.png" alt="">
+      <div class="card-back">
+        <div class="div-cvc" id="cvc-card">000</div>
+        <img src="./images/bg-card-back.png" alt="">
+      </div>
+      <div class="card-front">
+        <div class="div-number" id="number-card">0000 0000 0000 0000</div>
+        <div class="nameAndDate">
+          <div class="div-name" id="name-card">Jane Appleseed</div>
+          <div class="div-date" id="exp-date">
+            <span id="month-card" class="div-month">00</span>/<span id="year-card" class="div-year">00</span>
+          </div>
+
+        </div>
+        <img src="./images/bg-card-front.png" alt="">
+      </div>
+    </div>
+
+    <div class="container_form-datos" id="container_form-datos">
+      <div class="success ocultar" id="success">
+        <div class="check">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-check" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <path d="M5 12l5 5l10 -10" />
+          </svg>
+        </div>
+
+        <h1>Thank You!</h1>
+        <p>We've added your card de tails</p>
+        <button id="btn-submit">Continue</button>
+      </div>
+
+      <form id="submit" action="/" method="get" class="form-datos">
+  
+        <div class="container-datos">
+          
+  
+          <div class="campo" id="campoName">
+            <label for="name-input">Cardholder Name</label>
+            <input
+              class="input inputName"
+              type="text"
+              name="name"
+              id="name-input"
+              placeholder="e.g. Jane Appleseed"
+            >
+            <div id="name-error"></div>
+          </div>
+          
+          <div class="campo" id="campoNumber">
+            <label for="number-input">Card Number</label>
+            <input
+              class="input"
+              type="text"
+              name="number"
+              id="number-input"
+              placeholder=".e.g. 1234 5678 9123 0000"
+            >
+            <div class="alert-number" id="number-error"></div>
+          </div>
+    
+          <div class="container">
+            <div class="campo-date">
+              
+              <label for="month-input">Exp. Date (MM/YY)</label>
+              <div class="date">
+                <div class="container-month">
+                  <input type="number" name="month" id="month-input" placeholder="MM">
+                  <div id="month-error"></div>
+
+                </div>
+                <div class="container-year">
+                  <input type="number" name="year" id="year-input" placeholder="YY">
+                  <div id="year-error"></div>
+
+                </div>
+              </div>
+
+            </div>
+            <div class="campo-cvc">
+              <label for="cvc-input">CVC</label>
+              <input
+                class="input"
+                type="number"
+                name="cvc-input"
+                id="cvc-input"
+                placeholder="e.g. 123"
+              >
+              <div id="cvc-error"></div>
+            </div>
+          </div>
+          <input class="btn" type="submit" value="Confirm">
+          
+        </div>
+        
+      </form>
+    </div>
+  </div>
+  <script src="./build/js/index.js"></script>
+</body>
+</html>

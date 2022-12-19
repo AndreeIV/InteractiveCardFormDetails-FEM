@@ -1,0 +1,102 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.campo {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    label {
+        color: v.$Very-dark-violet;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        letter-spacing: .1rem;
+        font-weight: 500;
+        margin-bottom: 1rem;
+    }
+
+    input {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+        border: 1px solid v.$Light-grayish-violet;
+        border-radius: .7rem;
+        height: 4.5rem;
+        cursor: pointer;
+
+        &::placeholder {
+            color: v.$Light-grayish-violet;
+            padding-left: 1.3rem;
+        }
+        
+        &:focus {
+            border: 2px solid v.$Very-dark-violet;
+            outline: none;
+        }
+    }
+}
+.form-datos {
+    margin: 0 2rem;
+    @include m.desktop {
+        margin: 0;
+        width: 37.5rem;
+    }
+    
+    .container-datos {
+        width: 100%;
+        height: 100%;
+        @include m.desktop {
+            position: relative;
+            left: 10rem;
+        }
+        
+    }
+}
+
+.container_form-datos {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 2;
+}
+
+.container {
+    display: flex;
+    gap: 1rem;
+
+    .campo-date {
+        @extend .campo;
+        
+        .date {
+            display: flex;
+            gap: 1rem;
+
+            input {
+                width: 100%
+            }
+        }
+    }
+
+    .campo-cvc {
+        @extend .campo;
+        
+        input {
+            width: 100%;
+        }
+    }
+}
+
+.btn {
+    width: 100%;
+    padding: 1.5rem 0;
+    display: block;
+    margin-bottom: 5rem;
+
+    cursor: pointer;
+    background-color: v.$Very-dark-violet;
+    color: v.$white;
+    border: none;
+    border-radius: .7rem;
+    font-size: 1.8rem;
+    font-weight: v.$normal;
+}

@@ -1,0 +1,43 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.div-cvc {
+    position: absolute;
+    top: 7rem;
+    right: 3.2rem;
+    color: v.$white;
+
+    @include m.desktop {
+        top: 11.3rem;
+        right: 5rem;
+        font-size: 1.5rem;
+    }
+    
+}
+.div-number {
+    position: absolute;
+    width: 100%;
+    bottom: 5rem;
+    text-align: center;
+    font-size: 2.18rem;
+    padding: 0 2rem;
+    color: v.$white;
+    top: 50%;
+    @include m.desktop {
+        font-size: 3.5rem;
+    }
+    
+}
+
+.nameAndDate {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2rem;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    color: v.$white;
+
+    bottom: 2rem;
+}
